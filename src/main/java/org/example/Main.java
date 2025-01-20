@@ -1,14 +1,25 @@
 package org.example;
 
 import java.util.*;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
 
         // Create a list
-        List<String> list1 = Arrays.asList("a", "b", "c");
+        List<String> list1 = new ArrayList<>();
+
+        // Add new element
+        list1.add("a");
+        list1.add("b");
+        list1.add(1, "c");
+        list1.addLast("d");
+        list1.addFirst("1");
+
+        list1.remove(2);
+        list1.remove("a");
+
+        list1.set(0, "c");
 
         // Create new stream
         Stream<String> stream = list1.stream();
